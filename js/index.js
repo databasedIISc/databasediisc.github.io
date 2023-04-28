@@ -162,3 +162,13 @@ function tryUnload() {
     unload();
   }
 }
+
+document.getElementById("more-inquiry").addEventListener("click", function() {
+  document.getElementById("more-info").style.display = "inline-block";
+  document.getElementById("more-inquiry").style.display = "none";
+});
+
+document.getElementById("less-inquiry").addEventListener("click", function () {
+  document.getElementById("more-info").style.display = "none";
+  document.getElementById("more-inquiry").style.display = "inline-block";
+});

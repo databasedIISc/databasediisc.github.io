@@ -179,3 +179,63 @@ footer img{
     display: inline-block;
   }
 }
+
+
+footer {
+    margin: 100px 0px 0px 0px;
+    background-color: rgb(16, 16, 16);
+    text-align: center;
+    padding: 40px 0px 10px 20px;
+    height: auto;
+    overflow: hidden;
+}
+
+.left, .center, .right {
+    float: left;
+    margin: 0 auto;
+}
+
+.left {
+    width: 80%;
+    padding: 0px 10px;
+}
+
+.center {
+    width: 0%;
+    margin: 0 auto;
+}
+
+.right {
+    width: 20%;
+    margin: 0 auto;
+}
+
+    .left::after, .center::after, .right::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+footer h1 {
+    font-size: 4.2vh;
+}
+
+footer h2 {
+    font-size: 3.2vh;
+}
+
+footer h3 {
+    font-size: 2.5vh;
+}
+
+footer h4 {
+    font-size: 2.2vh;
+}
+
+@media screen and (max-width: 600px) {
+    .left, .right {
+        width: 90%;
+        float: none;
+        margin: 0 auto;
+    }
+}
