@@ -76,57 +76,68 @@
 
 <body>
   <div id="loader"></div>
-  <header>
-    <nav>
+    <header>
+      <nav>
+        <div class="nav-box">
+          <a href="../" class="headerLogo">
+            <img src="../img/Logo_transparent.png" />
+          </a>
 
+          <a href="../#about" class="nav-list-link">About</a>
+          <a href="#" class="nav-list-link">Learn</a>
+          <a href="../#events" class="nav-list-link">Events</a>
+          <a href="../#blogs" class="nav-list-link">Blog</a>
+          <a href="../#contact" class="nav-list-link">Contact</a>
 
-      <div class="nav-box">
-        <a href="../index.html" class="headerLogo">
-          <img src="../img/Logo_transparent.png" />
-        </a>
+          <a id="nav-hamburger" data-state="inactive">
+            <span></span><span></span><span></span>
+            <p>&times;</p>
+          </a>
+        </div>
+      </nav>
 
-        <a href="../index.html" class="nav-list-link">Home</a>
-        <a href="#title" class="nav-list-link">Events</a>
-
-        <a id="nav-hamburger" data-state="inactive">
-          <span></span><span></span><span></span>
-          <p>&times;</p>
-        </a>
+      <div id="mobileMenu">
+        <a href="../#about">About</a>
+        <a href="#">Learn</a>
+        <a href="../#events">Events</a>
+        <a href="../#blogs">Blog</a>
+        <a href="../#contact">Contact</a>
       </div>
-    </nav>
+    </header>
 
-    <div id="mobileMenu">
-      <a href="../index.html" class="nav-list-link">Home</a>
-      <a href="#title" class="nav-list-link">Events</a>
-    </div>
-
-  </header>
   <div id="title">
-
     <h1>
       Events
-      </h1>
-
+    </h1>
   </div>
   <main>
-    <div class="filter" data-type="type">
-      <h3>Type</h3>
-    </div>
-    <div class="filter" data-type="aud">
-      <h3>Audience Level</h3>
-      <button class="active" data="Beginner">Beginner</button>
-      <button class="active" data="Intermediate">Intermediate</button>
-      <button class="active" data="Advanced">Advanced</button>
-    </div>
-    <div id="container">
-       </div>
+    <div id="eventsGrid"></div>
   </main>
-  <div>
-    <div id="modal"></div>
-  </div>
-<footer>
+  <footer>
     <img src="../img/Logo_transparent.png">
   </footer>
+  <div id="eventModal">
+    <div class="modalContent">
+      <div class="modalImg">
+        <button id="closeEventModal">
+          <span class="material-symbols-outlined"> close </span>
+        </button>
+        <div class="imagesContainer"></div>
+        <div class="imagesButtons"></div>
+      </div>
+      <div class="modalDetails">
+        <h1 class="modalHeading"></h1>
+        <div class="modalChips">
+          <span class="modalType"></span>
+          <span class="modalAudience"></span>
+        </div>
+        <div class="modalChips modalTopics"></div>
+        <span class="modalDate"></span>
+        <span class="modalPlace"></span>
+        <p class="modalDescription"></p>
+      </div>
+    </div>
+  </div>
   <script src="../js/common.js"></script>
   <script src="../js/events.js"></script>
 </body>

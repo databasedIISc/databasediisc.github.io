@@ -10,11 +10,11 @@
   font-size: 25vw;
   line-height: 100vh;
 }
-
 main{
   margin: 50px auto;
 }
 
+/* 
 .filter{
 margin: 20px 0;   
 
@@ -37,7 +37,7 @@ margin: 20px 0;
 .filter button:first-child{
   margin-left: 0;
 }
-/* .filter button:hover, */
+
 .filter button.active{
   background-color: #fff;
   color: rgb(6, 6, 61);
@@ -51,214 +51,216 @@ float: left;
 background-color: #2f7a2f;
 color: #120202;
 width: 100px;
-/*line-height: 100px;*/
 text-align: center;
 margin: 2px;
-display: none; /* Hidden by default */
+display: none;
 }
 .show {
   display: block;
+} */
+
+
+#eventsGrid{
+  overflow: hidden;
 }
-#container {
+
+#eventsGrid > div {
+  float: left;
+  width: calc(100% / 2 - 4px);
+  box-sizing: border-box;
+  margin: 2px;
+  border-radius: 5px;
+  text-align: left;
+  position: relative;
+  transition: 0.3s all;
+  background: #fff;
   display: flex;
-  width: 100%;
+  flex-direction: row;
+  align-items: stretch;
+  cursor: pointer;
 }
-.card_container{
-  /* position: absolute; */
-  /* justify-content: center; */
-  min-width: 300px;
-  padding: 0px 5px;
+#eventsGrid *{
+  color: #000;
 }
-.card{
-  max-width: 100%;
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 10px;
-  margin: 5px auto;
-  border-radius: 10px;
+.eventCardImg{
+  width: 20%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px 0 0 5px;
+}
+.eventCardContent{
+  padding: 20px;
+  width: 80%;
+}
+.eventCardDate{
+  color: rgb(214, 70, 17)!important;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.eventCardTitle{
+  margin: 5px 0 20px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.eventCardType{
+  background-color: rgb(214, 70, 17);
+  color: #fff!important;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  border-radius: 5px;
 }
 
-
-/* @media only screen and (max-width: 700px){
-  .card{
-      display: block;
-      width: calc(100% / 2 - 4px);
-      min-width: min-content;
-      margin-left: 0!important;
-      margin-right: 0!important;
+@media only screen and (max-width: 900px) {
+  #eventsGrid > div {
+    width: 100%;
+    margin: 2px 0;
   }
-} */
-.card h2{
-  color:rgb(6, 6, 61);
-}
-.card .audTag{
-  color: white;
-  padding: 5px 10px;
-  margin: 10px 5px 5px 0;
-  display: inline-block;
-  width: fit-content;
-  border-radius: 10px;
-}
-.card .audTag.Beginner{
-  background-color: #2f7a2f;
-}
-.card .audTag.Intermediate{
-  background-color: #f7b500;
-}
-.card .audTag.Advanced{
-  background-color: #f70000;
-}
-.card .typeTag {
-  background-color: black;
-  color: white;
-  padding: 5px 10px;
-  margin: 5px 5px;
-  display: inline-block;
-  width: fit-content;
-  border-radius: 10px;
-  margin-left: 0;
-}
-.card .topicTag{
-  background-color: rgb(12, 4, 75);
-  color: white;
-  padding: 5px 10px;
-  margin: 5px 5px;
-  display: inline-block;
-  width: fit-content;
-  border-radius: 10px;
-}
-.card .dateTag{
-  background-color: rgba(6, 126, 14, 0.517);
-  color: white;
-  padding: 5px 10px;
-  margin: 5px 5px;
-  display: inline-block;
-  width: fit-content;
-  border-radius: 10px;
-}
-/* .card .typeTag span:first-child{
-  margin-left: 0;
-} */
-.card a{
-  display: block;
-  text-align: center;
-  margin: 5px 0 0 0;
-  padding: 10px 20px;
-  background-color: rgb(6, 6, 61);
-  color: white;
-  border-radius: 10px;
-  text-decoration: none;
-  transition: 0.3s background-color, 0.3s color;
-
-}
-.card a:hover{
-  background-color: white;
-  color: rgb(6, 6, 61);
-}
-#learnMore{
-  display: block;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-weight: bold;
-  font-size: 15px;
-  text-align: center;
-  margin: 5px 0 0 0;
-  padding: 10px 20px;
-  background-color: rgb(255, 0, 0);
-  color: white;
-  border-radius: 10px;
-  transition: 0.3s background-color, 0.3s color;
-  width: 100%;
-}
-#learnMore:hover{
-  background-color: white;
-  color: rgb(255, 0, 0);
-}
-#modal{
+}#eventModal{
+  display: none;
   position: fixed;
-  display: flex;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  display: none;
-  justify-content: center;
-  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+  padding-top: 50px;
+  animation: fadein 0.3s ease-in-out forwards;
 }
-#modal .modal-content{
-  background-color: white;
-  padding: 20px;
-  border-radius: 10px;
-  width: 80%;
-  max-width: 500px;
-  height: 80%;
-  max-height: 500px;
-  overflow: auto;
-}
-#modal .modal-content .close{
-  color: black;
-  position: top-right;
+#closeEventModal{
+  position: absolute;
   top: 10px;
   right: 10px;
-  font-size: 20px;
+  width: 30px;
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  border: 0;
   cursor: pointer;
-  transition: 0.3s color;
 }
-#modal .modal-content .close:hover{
-  color: red;
-}
-#modal .modal-content .modal-body{
-  height: 100%;
+#eventModal .modalContent{
+  width: 90%;
+  max-width: 600px;
+  margin: auto;
+  max-height: calc(100vh - 100px);
+  background-color: #fff;
+  border-radius: 20px;
   overflow: auto;
+  animation: growin 0.3s ease-in-out forwards;
 }
-#modal .modal-content .modal-body h2{
-  color: rgb(6, 6, 61);
+@keyframes growin{
+  0%{
+    transform: scale(0.5);
+    translate: 0 500px;
+  }
+  100%{
+    transform: scale(1);
+    translate: 0 0;
+  }
 }
-#modal .modal-content .modal-body .audTag{
-  color: white;
-  padding: 5px 10px;
-  margin: 10px 5px 5px 0;
-  display: inline-block;
+#eventModal .modalDescription{
+  white-space: pre-line;
+}
+#eventModal .modalImg{
+  border-radius: 20px 20px 0 0;
+  padding-top: 60%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+#eventModal .modalImg img{
+  display: none;
+  width: 100%;
+}
+#eventModal .imagesButtons{
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  margin: auto;
   width: fit-content;
-  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border-radius: 20px;
 }
-#modal .modal-content .modal-body .audTag.Beginner{
-  background-color: #2f7a2f;
-}
-#modal .modal-content .modal-body .audTag.Intermediate{
-  background-color: #f7b500;
-}
-#modal .modal-content .modal-body .audTag.Advanced{
-  background-color: #f70000;
-}
-#modal .modal-content .modal-body .typeTag{
-  background-color: black;
-  color: white;
-  padding: 5px 10px;
-  margin: 5px 5px;
+#eventModal .imagesButtons button{
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 100%;
   display: inline-block;
-  width: fit-content;
-  border-radius: 10px;
+  width: 10px;
+  height: 10px;
+  margin: 0 2px;
+  cursor: pointer;
+  transition: 0.3s all;
 }
-#modal .modal-content .modal-body .typeTag{
-  background-color: rgb(12, 4, 75);
-  color: white;
+#eventModal .imagesButtons button.active{
+  background-color: #fff;
+  width: 15px;
+  height: 15px;
+}
+#eventModal .modalDetails{
+  padding: 20px;
+}
+#eventModal .modalDetails *{
+  color: #000;
+}
+#eventModal .modalHeading{
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+#eventModal .modalDate, 
+#eventModal .modalPlace{
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  margin: 10px 0;
+}
+#eventModal .modalDate span, 
+#eventModal .modalPlace span{
+  vertical-align: bottom;
+  font-size: 40px;
+  margin-right: 15px;
+}
+#eventModal .modalDate,
+#eventModal .modalDate span{
+  color: #3F51B5;
+}
+#eventModal .modalPlace,
+#eventModal .modalPlace span{
+  color: #009688;
+}
+#eventModal .modalChips{
+  text-align: center;
+  margin: 10px 0;
+  font-size: 0.8em;
+}
+#eventModal .modalType,
+#eventModal .modalAudience{
+  color: #fff!important;
   padding: 5px 10px;
-  margin: 5px 5px;
+  text-transform: uppercase;
+  border-radius: 5px;
   display: inline-block;
-  width: fit-content;
-  border-radius: 10px;
 }
-#modal .modal-content .modal-body .dateTag{
-  background-color: rgba(6, 126, 14, 0.517);
-  color: white;
+#eventModal .modalType{
+  background-color: rgb(214, 70, 17);;
+}
+#eventModal .modalAudience{
+  background-color: #E91E63;
+}
+#eventModal .modalTopic{
+  border: 1px solid #333;
   padding: 5px 10px;
-  margin: 5px 5px;
+  text-transform: uppercase;
+  border-radius: 20px;
   display: inline-block;
-  width: fit-content;
-  border-radius: 10px;
-}
-#modal .p{
-  margin: 0;
-  padding: 0;
-  color: black;
+  margin: 0 2px;
 }
