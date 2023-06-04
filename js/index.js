@@ -91,7 +91,8 @@ fetch(
           row.fields.Description ? row.fields.Description : "";
       });
     });
-    tryUnload();
+    // tryUnload();
+    unload();
   });
 
 function eventsModalImage(e) {
@@ -118,6 +119,7 @@ document
   });
 
 function loadBlogs({ feed }) {
+  console.log(feed);
   var i = 0;
   feed.entry.forEach(function (entry) {
     if (i == 4) return;
@@ -151,24 +153,14 @@ function loadBlogs({ feed }) {
     i += 1;
   });
 
-  tryUnload();
+  // tryUnload();
 }
 
 
-var UNLOAD_TRIAL = 0;
-function tryUnload() {
-  UNLOAD_TRIAL += 1;
-  if (UNLOAD_TRIAL == 2) {
-    unload();
-  }
-}
-
-document.getElementById("more-inquiry").addEventListener("click", function() {
-  document.getElementById("more-info").style.display = "inline-block";
-  document.getElementById("more-inquiry").style.display = "none";
-});
-
-document.getElementById("less-inquiry").addEventListener("click", function () {
-  document.getElementById("more-info").style.display = "none";
-  document.getElementById("more-inquiry").style.display = "inline-block";
-});
+// var UNLOAD_TRIAL = 0;
+// function tryUnload() {
+//   UNLOAD_TRIAL += 1;
+//   if (UNLOAD_TRIAL == 1) { // this is supposed to be 2! (Events + Blogs = 2)
+//     unload();
+//   }
+// }
