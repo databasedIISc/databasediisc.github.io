@@ -1,8 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\css"
+    "\\css",
+    "\\learn",
+    "\\pages",
+    "\\pages\\paradox"
   ],
-  "SelectedNode": "\\css\\common.css",
+  "SelectedNode": "\\pages\\paradox\\index.html",
   "PreviewInSolutionExplorer": false
 }

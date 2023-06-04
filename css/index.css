@@ -37,9 +37,13 @@
   text-align: center;
 }
 
+#about {
+  align-items: center;
+}
+
 .about-content,
 #about img {
-  width: 50%;
+  width: calc(50% - 20px);
   display: block;
   float: left;
 }
@@ -48,8 +52,24 @@
   width: calc(50% - 20px);
   padding: 10px;
   text-align: justify;
-  margin-bottom: 25px;
 }
+
+.link {
+  transition: 0.3s;
+}
+
+.link:hover {
+  color: #a2a2ff;
+}
+
+#more-inquiry {
+  display: none;
+}
+
+#more-info {
+  text-decoration: none;
+}
+
 @media only screen and (max-width: 800px) {
   .about-content{
     width: calc(100% - 20px);
@@ -61,6 +81,12 @@
   #events,
   #blogs {
     padding: 100px 5px;
+  }
+  #more-inquiry {
+    display: inline-block;
+  }
+  #more-info {
+    display: none;
   }
 }
 
