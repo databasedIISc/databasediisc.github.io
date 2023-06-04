@@ -21,7 +21,8 @@
 
 #about,
 #events,
-#blogs {
+#blogs,
+#contact {
   padding: 50px 25px;
   clear: both;
   overflow: auto;
@@ -294,7 +295,7 @@
   display: inline-block;
 }
 #eventModal .modalType{
-  background-color: rgb(214, 70, 17);;
+  background-color: rgb(214, 70, 17);
 }
 #eventModal .modalAudience{
   background-color: #E91E63;
@@ -384,7 +385,7 @@
 }
 #contactMap{
   display: block;
-  width: 60%;
+  width: calc(60% - 10px);
   float: left;
 }
 #contactDetails{
@@ -393,7 +394,8 @@
   float: left;
   box-sizing: border-box;
   background-color: rgba(255, 255, 255, 0.8);
-  margin: 0 0 0 10px;
+  margin: 0 auto;
+  padding: revert;
   color: #000;
 }
 
@@ -451,10 +453,79 @@
 }
 
 @media only screen and (max-width: 600px){
-  #contactMap, #contactDetails{
-    width: 100%;
+  #contactMap{
+    width: 90%;
   }
   #contactDetails{
-    margin: 10px 0 0 0;
+    width: 90%;
+    padding: 0;
+  }
+}
+
+footer {
+  display: block;
+  margin: 100px 0px 0px 0px;
+  background-color: rgb(16, 16, 16);
+  padding: 10px 10px 10px 10px;
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+}
+
+footer img {
+  width: 100px;
+}
+
+.left, .center, .right {
+  display: inline;
+  float: left;
+  margin: 0 auto;
+}
+
+.link {
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: #a2a2ff;
+}
+
+.left {
+  width: 80%;
+  padding: 0px 10px;
+  text-align: left;
+}
+
+.center {
+  width: 0%;
+  margin: 0 auto;
+}
+
+.right {
+  width: 20%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.left::after, .center::after, .right::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media only screen and (max-width: 600px) {
+  .nav-list-link {
+    display: none;
+  }
+  #nav-hamburger{
+    display: inline-block;
+  }
+  .left, .right {
+    width: 90%;
+    text-align: center;
+  }
+  #footer-logo {
+      width: 90%;
   }
 }

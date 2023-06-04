@@ -156,26 +156,6 @@ nav {
 }
 
 main {
-  width: calc(100% - 20px);
+  width: 100%;
   margin: auto;
-  max-width: 1200px;
-}
-footer{
-  margin-top: 100px;
-  background-color: rgb(16, 16, 16);
-  text-align: center;
-  padding: 100px 0;
-}
-footer img{
-  max-width: 90%;
-  width: 150px;
-}
-
-@media only screen and (max-width: 550px) {
-  .nav-list-link {
-    display: none;
-  }
-  #nav-hamburger{
-    display: inline-block;
-  }
 }
