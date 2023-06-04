@@ -50,6 +50,14 @@
   text-align: justify;
   margin-bottom: 25px;
 }
+
+#more-inquiry {
+    display: none;
+}
+#more-info {
+    text-decoration: none;
+}
+
 @media only screen and (max-width: 800px) {
   .about-content{
     width: calc(100% - 20px);
@@ -61,6 +69,12 @@
   #events,
   #blogs {
     padding: 100px 5px;
+  }
+  #more-inquiry {
+    display: inline-block;
+  }
+  #more-info {
+    display: none;
   }
 }
 
