@@ -560,3 +560,38 @@ footer img {
     width: 90%;
   }
 }
+
+.hubspot-form {
+  margin-top: 15px;
+  margin-inline: 20%;
+  padding-top: 15px;
+  padding-inline: 15px;
+  border-radius: 5px;
+  background-color: #cfd9e0;
+}
+
+@media only screen and (max-width: 900px) {
+  .hubspot-form {
+    margin-inline: 6%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .hubspot-form {
+    margin-inline: 1%;
+  }
+}
+
+#hubspot-form-title {
+  text-align: center;
+  font-size: 2em;
+  color: black;
+  margin-block: 10px;
+}
+
+#hubspot-form-description {
+  text-align: center;
+  color: black;
+  font-size: 0.9em;
+  padding-bottom: 15px;
+}
