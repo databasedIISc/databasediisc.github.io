@@ -476,14 +476,28 @@
   }
 }
 
+.footerWrap {
+  width: 100%;
+  position: relative;
+  bottom: 0px;
+  height: 150px;
+  overflow: visible;
+}
+
 footer {
   display: block;
-  margin: 100px 0px 0px 0px;
-  background-color: rgb(16, 16, 16);
-  padding: 10px 10px 10px 10px;
-  height: auto;
   width: 100%;
-  overflow: hidden;
+  background-color: rgb(16, 16, 16);
+  padding: 20px;
+  height: 100%;
+  margin: 100px 0px 0px 0px;
+}
+
+.footerContent {
+  width: calc(100% - 20px);
+  max-width: 1200px;
+  height: 100%;
+  margin: auto;
 }
 
 footer img {
@@ -535,11 +549,14 @@ footer img {
   #nav-hamburger{
     display: inline-block;
   }
+  .footerWrap {
+    height: calc(100vw + 100px);
+  }
   .left, .right {
     width: 90%;
     text-align: center;
   }
   #footer-logo {
-      width: 90%;
+    width: 90%;
   }
 }
