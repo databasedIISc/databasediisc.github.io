@@ -125,6 +125,11 @@
 // Array of objects containing formatted text, page link and image to be displayed on the title page
 let major_events = [
   {
+    text: `<span style="font-size: 50px;"><b>GitHub <br/> CEO Visit</b></span>`,
+    link: "",
+    img: "./img/github.jpeg"
+  },
+  {
     text: `<span style="font-size: 80px;"><b>IISc</b></span> <br/> OPEN DAY <br/> 2025`,
     link: "./pages/open-day-2025",
     img: "./img/banner.webp"
