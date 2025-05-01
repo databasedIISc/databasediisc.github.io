@@ -125,12 +125,12 @@
 // Array of objects containing formatted text, page link and image to be displayed on the title page
 let major_events = [
   {
-    text: `<span style="font-size: 30px;"><b>Kyle Daigle</b></span> <br/><span style="font-size: 23px; font-weight: 600;">COO, GitHub</span> <br/> <span style="font-size: 23px">visits IISc</span>`,
+    text: `<span style="font-size: 35px;"><b>Kyle Daigle</b></span> <br/><span style="font-size: 25px;"><b>COO, GitHub</b></span> <br/> <span style="font-size: 25px">visits IISc</span>`,
     link: "",
     img: "./img/github.jpg"
   },
   {
-    text: `<span style="font-size: 70px;"><b>IISc</b></span> <br/> OPEN DAY <br/> 2025`,
+    text: `<span style="font-size: 70px;"><b>IISc</b></span> <br/> <span style="font-size: 30px;">OPEN DAY <br/> 2025</span>`,
     link: "./pages/open-day-2025",
     img: "./img/banner.webp"
   },
@@ -140,7 +140,7 @@ let major_events = [
     img: "./img/algorithms/group-pic.webp"
   },
   {
-    text: `<span style="font-size: 30px;">DATABASED</span> <br/> <b>TECH <br/> IDEATHON</b>`,
+    text: `<span style="font-size: 30px;">DATABASED</span> <br/> <span style="font-size: 30px;"><b>TECH <br/> IDEATHON</b></span>`,
     link: "./pages/ideathon",
     img: "./img/ideathon/ideathon_presentation.webp"
   }
