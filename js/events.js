@@ -125,6 +125,11 @@
 // Array of objects containing formatted text, page link and image to be displayed on the title page
 let major_events = [
   {
+    text: `<span class="text-size-30">DATABASED<br/><b>Hack and Seek</b></span>`,
+    link: "./pages/hack-and-seek",
+    img: "./img/hack-and-seek/hack-and-seek-poster.png"
+  },
+  {
     text: `<span class="text-size-35"><b>Kyle Daigle</b></span> <br/><span class="text-size-25"><b>COO, GitHub</b><br/>visits IISc</span>`,
     link: "",
     img: "./img/github.jpg"
@@ -138,11 +143,6 @@ let major_events = [
     text: `<span class="text-size-35"><b>Algorithm <br/> Festival</b></span>`,
     link: "./pages/algorithms",
     img: "./img/algorithms/group-pic.webp"
-  },
-  {
-    text: `<span class="text-size-30">DATABASED<br/><b>TECH<br/>IDEATHON</b></span>`,
-    link: "./pages/ideathon",
-    img: "./img/ideathon/ideathon_presentation.webp"
   }
 ]
 
