@@ -1,0 +1,31 @@
+<main>
+  <div id="login-box" style="max-width: 500px; margin: 0 auto; padding: 1em;">
+    <h2 style="text-align: center;">Databased Core Login</h2>
+    <form id="login-form">
+      <label for="username">Username</label><br />
+      <input type="text" id="username" name="username" required style="width: 100%; padding: 0.5em; margin-bottom: 1em;" /><br />
+
+      <label for="password">Password</label><br />
+      <input type="password" id="password" name="password" required style="width: 100%; padding: 0.5em; margin-bottom: 1em;" /><br />
+
+      <button type="submit" style="padding: 0.5em 1em;">Login</button>
+    </form>
+    <p id="response" style="text-align: center; margin-top: 1em; color: lime;"></p>
+  </div>
+</main>
+
+<!-- Hidden flag in comment for source code readers -->
+<!-- part1{br41n_ -->
+
+<script>
+document.getElementById('login-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const password = document.getElementById('password').value;
+  if (password === 'databrainCTF2025') {
+    document.getElementById('response').innerText = 'Access Granted! Flag: flag{br41n_login_bypass3d}';
+  } else {
+    document.getElementById('response').innerText = 'Incorrect password. Try again.';
+    document.getElementById('response').style.color = 'red';
+  }
+});
+</script>
