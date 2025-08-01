@@ -1,31 +1,112 @@
-<main>
-  <div id="login-box" style="max-width: 500px; margin: 0 auto; padding: 1em;">
-    <h2 style="text-align: center;">Databased Core Login</h2>
-    <form id="login-form">
-      <label for="username">Username</label><br />
-      <input type="text" id="username" name="username" required style="width: 100%; padding: 0.5em; margin-bottom: 1em;" /><br />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Databased Core Login</title>
+  <style>
+    body {
+      background-color: #0f0f0f;
+      color: #e0e0e0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
 
-      <label for="password">Password</label><br />
-      <input type="password" id="password" name="password" required style="width: 100%; padding: 0.5em; margin-bottom: 1em;" /><br />
+    #login-box {
+      background-color: #1e1e1e;
+      padding: 2em;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 255, 0, 0.2);
+      width: 100%;
+      max-width: 400px;
+    }
 
-      <button type="submit" style="padding: 0.5em 1em;">Login</button>
-    </form>
-    <p id="response" style="text-align: center; margin-top: 1em; color: lime;"></p>
-  </div>
-</main>
+    h2 {
+      text-align: center;
+      margin-bottom: 1em;
+      color: #00ff88;
+    }
 
-<!-- Hidden flag in comment for source code readers -->
-<!-- part1{br41n_ -->
+    label {
+      display: block;
+      margin-bottom: 0.25em;
+      font-weight: bold;
+    }
 
-<script>
-document.getElementById('login-form').addEventListener('submit', function(e) {
-  e.preventDefault();
-  const password = document.getElementById('password').value;
-  if (password === 'databrainCTF2025') {
-    document.getElementById('response').innerText = 'Access Granted! Flag: flag{br41n_login_bypass3d}';
-  } else {
-    document.getElementById('response').innerText = 'Incorrect password. Try again.';
-    document.getElementById('response').style.color = 'red';
-  }
-});
-</script>
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 0.6em;
+      margin-bottom: 1em;
+      border: none;
+      border-radius: 6px;
+      background-color: #2a2a2a;
+      color: #fff;
+    }
+
+    button {
+      width: 100%;
+      padding: 0.75em;
+      border: none;
+      border-radius: 6px;
+      background-color: #00ff88;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    button:hover {
+      background-color: #00cc70;
+    }
+
+    #response {
+      text-align: center;
+      margin-top: 1em;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div id="login-box">
+      <h2>Databased Core Login</h2>
+      <form id="login-form">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required />
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required />
+
+        <button type="submit">Login</button>
+      </form>
+      <p id="response"></p>
+    </div>
+  </main>
+
+  <!-- part1{br41n_ -->
+  <!-- try pairing it with someone who knows the password -->
+
+  <script>
+    document.getElementById('login-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const username = document.getElementById('username').value.trim();
+      const password = document.getElementById('password').value;
+      const response = document.getElementById('response');
+
+      if (username === 'brainadmin' && password === 'databrainCTF2025') {
+        response.innerText = 'Access Granted! Flag: flag{br41n_login_bypass3d}';
+        response.style.color = 'lime';
+      } else {
+        response.innerText = 'Incorrect username or password.';
+        response.style.color = 'red';
+      }
+    });
+  </script>
+</body>
+</html>
