@@ -40,7 +40,7 @@
 #major-event-info {
   height: 100%;
   width: 35%;
-  padding: 20px 10px 5px 10px;
+  padding: 20px 0px 0px 0px;
 
   display: flex;
   flex-direction: column;
@@ -70,6 +70,11 @@
 /*35px font size of title*/
 .text-size-35 {
   font-size: 35px;
+}
+
+/*50px font size of title*/
+.text-size-50 {
+  font-size: 50px;
 }
 
 /*70px font size of title*/
@@ -141,8 +146,7 @@
 
 #major-event-photo {
   width: 65%;
-  margin: 12px 8px;
-
+  
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -195,7 +199,7 @@
   #major-event-photo {
     width: calc(100%);
     height: auto;
-    margin: 10px 10px;
+    
     aspect-ratio: 1.3;
   }
 }

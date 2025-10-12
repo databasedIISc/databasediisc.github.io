@@ -164,3 +164,18 @@ function loadBlogs({ feed }) {
 //     unload();
 //   }
 // }
+
+
+
+//js for ubuntu icon
+document.addEventListener('DOMContentLoaded', () => {
+  const ubuconIcon = document.getElementById('ubucon-icon');
+
+  setTimeout(() => {
+    if (ubuconIcon) {
+      ubuconIcon.style.transition = 'transform 0.5s ease-out, opacity 0.5s ease-out';
+      ubuconIcon.style.transform = 'translateY(0)'; 
+      ubuconIcon.style.opacity = '1'; 
+    }
+  }, 1000); 
+});
