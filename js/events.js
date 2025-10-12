@@ -125,17 +125,17 @@
 // Array of objects containing formatted text, page link and image to be displayed on the title page
 let major_events = [
   {
-    text: `<span class="text-size-50"><b>Ubuntu</b></span> <br/> <span class="text-size-30">India Conference <br/> 2025</span>`,
+    text: `<span class="text-size-60-40"><b>Ubuntu</b></span> <span class="text-size-40-30">India Conference <br/> 2025</span>`,
     link: "https://events.canonical.com/event/136/",
     img: "./img/ubucon/ubucon-poster.png"
   },
   {
-    text: `<span class="text-size-70"><b>IISc</b></span> <br/> <span class="text-size-30">OPEN DAY <br/> 2025</span>`,
+    text: `<span class="text-size-80-50"><b>IISc</b></span> <span class="text-size-50-30">OPEN DAY <br/> 2025</span>`,
     link: "./pages/open-day-2025",
-    img: "./img/banner.webp"
+    img: "./img/open-day-2025/team.webp"
   },
   {
-    text: `<span class="text-size-35"><b>Algorithm <br/> Festival</b></span>`,
+    text: `<span class="text-size-55-35"><b>Algorithm Festival</b></span>`,
     link: "./pages/algorithms",
     img: "./img/algorithms/group-pic.webp"
   }
@@ -148,7 +148,7 @@ function display_event(event_arr, index) {
 
   document.querySelector("#major-event-info-title").innerHTML = cur_event.text;
   document.querySelector("#major-event-info-btn").href = cur_event.link;
-  document.querySelector("#major-event-photo").style.backgroundImage = `url(${cur_event.img})`;
+  document.querySelector("#major-event-container").style.backgroundImage = `url(${cur_event.img})`;
   document.querySelector("#major-event-slider-count").innerHTML = `${index + 1} / ${event_arr.length}`;
 }
 
