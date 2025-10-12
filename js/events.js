@@ -126,7 +126,7 @@
 let major_events = [
   {
     text: `<span class="text-size-60-40"><b>Ubuntu</b></span> <span class="text-size-40-30">India Conference <br/> 2025</span>`,
-    link: "https://events.canonical.com/event/136/",
+    link: "https://ubuntu-in.netlify.app/events/ubucon-india-2025",
     img: "./img/ubucon/ubucon-poster.png"
   },
   {
