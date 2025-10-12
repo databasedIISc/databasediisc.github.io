@@ -125,14 +125,9 @@
 // Array of objects containing formatted text, page link and image to be displayed on the title page
 let major_events = [
   {
-    text: `<span class="text-size-30">DATABASED<br/><b>Hack and Seek</b></span>`,
-    link: "./pages/hack-and-seek",
-    img: "./img/hack-and-seek/hack-and-seek-poster.png"
-  },
-  {
-    text: `<span class="text-size-35"><b>Kyle Daigle</b></span> <br/><span class="text-size-25"><b>COO, GitHub</b><br/>visits IISc</span>`,
-    link: "",
-    img: "./img/github.jpg"
+    text: `<span class="text-size-50"><b>Ubuntu</b></span> <br/> <span class="text-size-30">India Conference <br/> 2025</span>`,
+    link: "https://ubuntu-in.netlify.app/events/ubucon-india-2025",
+    img: "./img/ubucon/ubucon-poster.png"
   },
   {
     text: `<span class="text-size-70"><b>IISc</b></span> <br/> <span class="text-size-30">OPEN DAY <br/> 2025</span>`,
